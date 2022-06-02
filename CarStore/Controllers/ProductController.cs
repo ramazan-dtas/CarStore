@@ -45,7 +45,7 @@ namespace CarStore.Controllers
                 return Problem(ex.Message);
             }
         }
-        /*[HttpGet("Products/by_category/{categoryId}")]
+        [HttpGet("Products/by_category/{categoryId}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -61,7 +61,7 @@ namespace CarStore.Controllers
             {
                 return Problem(ex.Message);
             }
-        }*/
+        }
 
         [HttpGet("{ProductId}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
