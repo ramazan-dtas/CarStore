@@ -20,7 +20,7 @@ namespace CarStore.test.Repository
         public CustomerRepositoryTest()
         {
             _options = new DbContextOptionsBuilder<AbContext>()
-                .UseInMemoryDatabase(databaseName: "MyGarageCustomer")
+                .UseInMemoryDatabase(databaseName: "CarStoreCustomer")
                 .Options;
 
             _context = new(_options);
