@@ -12,6 +12,8 @@ namespace CarStore.Database
         public DbSet<Order> Order { get; set; }
         public DbSet<Category> Category { get; set; }
         public DbSet<Customer> Customer { get; set; }
+        public AbContext() { }
+        public AbContext(DbContextOptions<AbContext> options) : base(options) { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
