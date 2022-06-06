@@ -13,7 +13,11 @@ const routes: Routes = [
   { path: 'newuser', component: NewuserpageComponent },
   { path: 'frontpage', component: FrontpageComponent},
   { path:'adminpage', component: AdminComponent},
-  { path:'loginpage', component: LoginpageComponent}
+  { path:'loginpage', component: LoginpageComponent},
+  {path:'productpage', component: ProductpageComponent},
+  {path:'profilpage', component: ProfilpageComponent},
+  {path:'searchpage', component: SearchpageComponent},
+  {path:'productDetailpage', component: ProductpageDetailComponent}
 ];
 
 @NgModule({
