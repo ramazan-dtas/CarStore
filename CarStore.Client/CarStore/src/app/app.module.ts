@@ -10,6 +10,8 @@ import { ProfilpageComponent } from './profilpage/profilpage.component';
 import { SearchpageComponent } from './searchpage/searchpage.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductpageDetailComponent } from './productpage/productpage-detail/productpage-detail.component';
+import { HeaderComponent } from './_global/header/header.component';
+import { FooterComponent } from './_global/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ProductpageDetailComponent } from './productpage/productpage-detail/pro
     ProductpageComponent,
     ProfilpageComponent,
     SearchpageComponent,
-    ProductpageDetailComponent
+    ProductpageDetailComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
