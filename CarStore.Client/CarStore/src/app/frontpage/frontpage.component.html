@@ -1,1 +1,13 @@
-<p>frontpage works!</p>
+<div class="grid grid-cols-3 leading-relaxed mt-10 mr-20">
+  <div class="" *ngFor="let product of products; let i = index">
+      <div class=" border border-Gold-Color h-auto w-auto  ml-20 bg-Gold-Color mb-10">
+          <button button class="btn btn-info me-1" routerLink="{{product.id}}">
+              <img src="assets/image/coming-soon.jpg">                
+          </button>
+              <h4>{{product.category?.categoryName}}</h4>
+              <p>Model: {{product.productName}}</p>
+              <p>Price: {{product.price}}</p>
+              <p>Model Year: {{product.productionYear}}</p>
+      </div>
+  </div>
+</div>

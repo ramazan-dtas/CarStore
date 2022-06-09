@@ -12,6 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProductpageDetailComponent } from './productpage/productpage-detail/productpage-detail.component';
 import { HeaderComponent } from './_global/header/header.component';
 import { FooterComponent } from './_global/footer/footer.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { FooterComponent } from './_global/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
