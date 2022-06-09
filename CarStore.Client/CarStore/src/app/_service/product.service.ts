@@ -9,12 +9,12 @@ import { product } from '../_model/product';
 })
 export class ProductService {
 
-  private apiUrl = 'https://localhost:7235/api/Product';
+  private apiUrl = "https://localhost:7235/api/Product";
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
   constructor(private http:HttpClient) { }
 
   getProductsByCategoryId(categoryId: number): Observable<product[]> {
-    return this.http.get<product[]>(`${this.apiUrl}/Products/by_category/${categoryId}`).pipe(
+    return this.http.get<product[]>(`${this.apiUrl}/products/by_category/${categoryId}`).pipe(
       catchError(this.handleError<product[]>("getProductsByCategoryId"))
     )
   }

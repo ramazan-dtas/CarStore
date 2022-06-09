@@ -17,7 +17,13 @@ const routes: Routes = [
   {path:'productpage', component: ProductpageComponent},
   {path:'profilpage', component: ProfilpageComponent},
   {path:'searchpage', component: SearchpageComponent},
-  {path:'productDetailpage', component: ProductpageDetailComponent}
+  {path:'productDetailpage', component: ProductpageDetailComponent},
+  {path: "", component: FrontpageComponent},
+
+  { path: 'products',component:ProductpageComponent},
+  { path: 'products/category',component:ProductpageComponent},
+  { path: 'products/category/:category_id',component:ProductpageComponent},
+  { path: 'products/:id',component:ProductpageDetailComponent}
 ];
 
 @NgModule({

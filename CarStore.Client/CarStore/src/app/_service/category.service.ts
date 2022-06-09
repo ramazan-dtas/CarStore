@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CategoryService {
 
-  private apiUrl = 'https://localhost:7235/api/Category';
+  private apiUrl = "https://localhost:7235/api/Category";
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
   constructor(private http:HttpClient) { }
 

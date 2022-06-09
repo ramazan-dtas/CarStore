@@ -1,1 +1,32 @@
-<p>productpage works!</p>
+<div class="d-flex bg-gry ">
+    <div class=" bg-gry">
+        <div class="categories border-2 ">
+            <div>
+                <a routerLink="product" (click)="getProducts()">All Products</a>
+            </div>
+            <div class="" *ngFor="let category of categories">
+                <div *ngIf="category.id" class="input-group mb-3 mx-2 w-auto">
+                </div>
+                <div *ngIf="category.id ">
+                    <a href="products/category/{{category.id}}"(click)="getProducts()">{{category.categoryName}}</a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="products ml-10 mr-5 mt-5 grid grid-cols-4 leading-relaxed bg-gry h-screen ">
+            <div class="" *ngFor="let product of products; let i = index">
+                <div class=" border border-Gold-Color h-auto w-auto  ml-20 mt-10 bg-Gold-Color">
+                        <button button class="btn btn-info me-1" routerLink="{{product.id}}">
+                            <img src="assets/image/coming-soon.jpg">                
+                        </button>
+                        <h4>{{product.category?.categoryName}}</h4>
+                        <p>Model: {{product.productName}}</p>
+                        <p>Price: {{product.price}} Kr.</p>
+                        <p>Model Year: {{product.productionYear}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
