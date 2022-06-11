@@ -1,0 +1,84 @@
+<div class=" bg-gry">
+
+    <div class=" ml-5 ">
+        <p class=" text-2xl mb-2">Get Categorys</p>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>CategoryName</th>
+                
+            </tr>
+            <tr id="trId" *ngFor="let Category of categorys">
+                <td>{{ Category.id }}</td>
+                <td>{{ Category.categoryName }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class=" ml-5">
+        <h3 class=" text-2xl mb-2">Create Category</h3>
+        <form action="">
+            <label for="new_Category_breedName">CategoryName: </label>
+            <input [(ngModel)]="createCategory.categoryName" id="new_Category_categoryName" name="categoryName"><br><br>
+
+            <button  (click)="create(createCategory)" class="bg-myGarage text-Gold-Color shadow-md float-left text-2xl leading-normal h-auto py-2 px-5 mb-3">Submit</button><br><br>
+
+        </form>
+        <table>
+            <tr>
+                <th>CategoryName</th>
+
+            </tr>
+            <tr>
+                <td>{{ createCategory.categoryName }}</td>
+
+            </tr>
+        </table>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class=" ml-5">
+        <h3 class=" text-2xl mb-2">Update Category</h3>
+        <form action="">
+            <label for="">Id </label>
+            <input [(ngModel)]="updateId" id="updateCategory.id" name="updateCategory.id"><br><br>
+
+            <label for="update_Category_categoryName">CategoryName: </label>
+            <input [(ngModel)]="updateCategory.categoryName"  name="categoryName"><br><br>
+
+            <button  (click)="update(updateId, updateCategory)" class="bg-myGarage text-Gold-Color shadow-md float-left text-2xl leading-normal h-auto py-2 px-5 mb-3">Submit</button><br><br>
+        </form>
+        <table>
+            <tr>
+                <th>CategoryId</th>
+                <th>CategoryName</th> 
+
+            </tr>
+            <tr>
+                <td>{{ updateId }}</td>
+                <td>{{ updateCategory.categoryName }}</td> 
+            </tr>
+        </table>
+
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class=" ml-5">
+        <h3 class=" text-2xl mb-2">Delete Category</h3>
+        <label for="id">id: </label>
+        <input [(ngModel)]="deleteId" id="id" name="id"><br><br>
+        <button (click)="delete(deleteId)" class="bg-myGarage text-Gold-Color shadow-md float-left text-2xl leading-normal h-auto py-2 px-5 mb-3">Submit</button><br><br>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+</div>

@@ -1,0 +1,177 @@
+<div class=" bg-gry">
+
+    <div class=" ml-5">
+        <h2 class=" text-2xl mb-2">Get Products</h2>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>ProductName</th>
+                <th>Price</th>
+                <th>ProductionYear</th>
+                <th>Km</th>
+                <th>Description</th>
+            </tr>
+            <tr *ngFor="let Product of products">
+                <td>{{ Product.id }}</td>
+                <td>{{ Product.productName }}</td>
+                <td>{{ Product.price }}</td>
+                <td>{{ Product.productionYear }}</td>
+                <td>{{ Product.km }}</td>
+                <td>{{ Product.description }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+    <div class=" ml-5">
+        <h3 class=" text-2xl mb-2">Get product by id</h3>
+        <form action="">
+            <label for="id">id: </label>
+            <input [(ngModel)]="getId" id="id" name="id"><br><br>
+            <button (click)="getById(getId)" class="bg-myGarage text-Gold-Color shadow-md float-left text-2xl leading-normal h-auto py-2 px-5 mb-3">Submit</button><br><br>
+        </form>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>ProductName</th>
+                <th>Price</th>
+                <th>ProductionYear</th>
+                <th>km</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>{{ getByIdProduct.id }}</td>
+                <td>{{ getByIdProduct.productName }}</td>
+                <td>{{ getByIdProduct.price }}</td>
+                <td>{{ getByIdProduct.productionYear }}</td>
+                <td>{{ getByIdProduct.km }}</td>
+                <td>{{ getByIdProduct.description }}</td>  
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class=" ml-5">
+        <h3 class=" text-2xl mb-2">Create Product</h3>
+        <label for="new_Product_id">Category: </label>
+        <form action="">
+            <select [(ngModel)]="createProduct.id">
+                <option [value]="0"> Vælg Category </option>
+                <option *ngFor= "let category of categories" [value]="category.id">{{category.categoryName}}</option>
+            </select>
+            <div></div>
+            <label for="new_Product_id">categoryId: </label>
+            <input [(ngModel)]="createProduct.id" id="new_Product_id" name="categoryId"><br><br>
+            <label for="new_Product_productName">ProductName: </label>
+            <input [(ngModel)]="createProduct.productName" id="new_Product_productName" name="productName"><br><br>
+            <label for="new_Product_Price">Price: </label>
+            <input [(ngModel)]="createProduct.price" id="new_Product_price" name="Price"><br><br>
+            <label for="new_Product_productionYear">ProductionYear: </label>
+            <input [(ngModel)]="createProduct.productionYear" id="new_Product_productionYear" name="productionYear"><br><br>
+            <label for="new_Product_km">Km: </label>
+            <input [(ngModel)]="createProduct.km" id="new_Product_km" name="km"><br><br>
+            <label for="new_Product_Description">Description: </label>
+            <input [(ngModel)]="createProduct.description" id="new_Product_description" name="Description"><br><br>
+            <button (click)="create(createProduct)" class="bg-myGarage text-Gold-Color shadow-md float-left text-2xl leading-normal h-auto py-2 px-5 mb-3">Submit</button><br><br>
+        </form>
+        <table>
+            <tr>
+                <th>categoryName</th>
+                <th>ProductName</th>
+                <th>Price</th>
+                <th>ProductionYear</th>
+                <th>km</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>{{ createProduct.id }}</td>
+                <td>{{ createProduct.productName }}</td>
+                <td>{{ createProduct.price }}</td>
+                <td>{{ createProduct.productionYear }}</td>
+                <td>{{ createProduct.km }}</td>
+                <td>{{ createProduct.description }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class=" ml-5">
+        <h3 class=" text-2xl mb-2">Update Product</h3>
+        <form action="">
+            <label for="">Id: </label>
+            <input [(ngModel)]="updateId" id="updateProduct.id" name="updateProduct.id"><br><br>
+            <label for="id">Category id: </label>
+            <input [(ngModel)]="updateProduct.id" id="product.category.id" name="product.category.id"><br><br>
+
+            <label for="update_Product_productName">ProductName: </label>
+            <input [(ngModel)]="updateProduct.productName"  name="productName"><br><br>
+
+            <label for="update_Product_Price">Price: </label>
+            <input [(ngModel)]="updateProduct.price" id="update_product_Price" name="Price"><br><br>
+
+            <label for="update_Product_productionYear">ProductionYear: </label>
+            <input [(ngModel)]="updateProduct.productionYear" id="update_product_productionYear" name="productionYear"><br><br>
+
+            <label for="update_Product_km">Km: </label>
+            <input [(ngModel)]="updateProduct.km" id="update_product_km" name="km"><br><br>
+
+            <label for="update_Product_Description">Description: </label>
+            <input [(ngModel)]="updateProduct.description" id="update_product_Description" name="Description"><br><br>
+            <button (click)="update(updateId, updateProduct)" class="bg-myGarage text-Gold-Color shadow-md float-left text-2xl leading-normal h-auto py-2 px-5 mb-3">Submit</button><br><br>
+        </form>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>CategoryId</th> 
+                <th>ProductName</th>
+                <th>Price</th>
+                <th>ProductionYear</th>
+                <th>Km</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>{{ updateId }}</td>
+                <td>{{ updateProduct.id }}</td> 
+                <td>{{ updateProduct.productName }}</td>
+                <td>{{ updateProduct.price }}</td>
+                <td>{{ updateProduct.productionYear }}</td>
+                <td>{{ updateProduct.km }}</td>
+                <td>{{ updateProduct.description }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class=" ml-5">
+        <h3 class=" text-2xl mb-2">Delete Product By Id</h3>
+        <label for="id">id: </label>
+        <input [(ngModel)]="deleteId" id="id" name="id"><br><br>
+        <button (click)="delete(deleteId)" class="bg-myGarage text-Gold-Color shadow-md float-left text-2xl leading-normal h-auto py-2 px-5 mb-3">Slet</button><br><br>
+        <br>
+        <br>
+        <br>
+
+        <h3 class=" text-2xl mb-2">Delete Product</h3>
+        <select [(ngModel)]="products">
+            <option [value]="0"> Vælg Product</option>
+            <option *ngFor= "let product of products" [value]="product">{{product.productName}}</option>
+        </select>
+        <button (click)="delete(deleteId)" class="bg-myGarage text-Gold-Color shadow-md float-left text-2xl leading-normal h-auto py-2 px-5 mb-3 mr-3">Slet</button><br><br>
+    </div>
+    <br>
+    <br>
+    <br>
+</div>

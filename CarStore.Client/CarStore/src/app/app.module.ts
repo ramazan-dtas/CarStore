@@ -15,6 +15,9 @@ import { FooterComponent } from './_global/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CategoryComponent } from './admin/category/category.component';
+import { ProductComponent } from './admin/product/product.component';
+import { UserComponent } from './admin/user/user.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { FormsModule } from '@angular/forms';
     SearchpageComponent,
     ProductpageDetailComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CategoryComponent,
+    ProductComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,13 @@
-<p>productpage-detail works!</p>
+<div class="grid grid-cols-2">
+    <img src="assets/image/coming-soon.jpg" class="ml-5 mt-5">
+    <div class="ml-5 mt-20">
+        <p>Brand: {{product.category?.categoryName}}</p>
+        <h2 class="mt-5">Model: {{product.productName}}</h2>
+        <p>ProductionYear: {{product.productionYear}}</p>
+        <p>Km: {{product.km}}</p>
+        <p>Price: {{product.price}} Kr.</p>
+        <p>Description: {{product.description}}</p>
+    
+        <button class="btn btn-primary me-1" (click)="(product)" class="bg-myGarage text-Gold-Color shadow-md float-left text-2xl leading-normal h-auto py-2 px-5 mt-28 w-3/5">Buy</button>
+    </div>
+</div>

@@ -1,0 +1,119 @@
+<div class=" bg-gry">
+    <div class=" ml-5">
+        <h2 class=" text-2xl mb-2">Get Users</h2>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+            <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.role }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class=" ml-5">
+        <h3 class=" text-2xl mb-2">Get user by id</h3>
+        <form action="">
+            <label for="id">id: </label>
+            <input [(ngModel)]="id" id="id" name="id"><br><br>
+            <button (click)="getById(id)" class="bg-myGarage text-Gold-Color shadow-md float-left text-2xl leading-normal h-auto py-2 px-5 mb-3">Submit</button><br><br>
+        </form>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.role }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class=" ml-5">
+        <h3 class=" text-2xl mb-2">Create user</h3>
+        <form action="">
+            <label for="new_user_mail">Mail: </label>
+            <input [(ngModel)]="newUser.email" id="new_user_mail" name="Mail"><br><br>
+            <label for="new_user_password">Password: </label>
+            <input [(ngModel)]="newUser.password" id="new_user_password" name="Password"><br><br>
+            <button (click)="create(newUser)" class="bg-myGarage text-Gold-Color shadow-md float-left text-2xl leading-normal h-auto py-2 px-5 mb-3">Submit</button><br><br>
+        </form>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+            <tr>
+                <td>{{ newUser.id }}</td>
+                <td>{{ newUser.email }}</td>
+                <td>{{ newUser.role }}</td>
+            </tr>
+        </table>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+
+    <div class=" ml-5">
+        <h3 class=" text-2xl mb-2">Update user</h3>
+        <form action="">
+            <label for="id">id: </label>
+            <input [(ngModel)]="updateUserId" id="id" name="id"><br><br>
+
+            <label for="update_user_mail">Mail: </label>
+            <input [(ngModel)]="updateUser.email" id="update_user_mail" name="Mail"><br><br>
+
+            <label for="update_user_password">Password: </label>
+            <input [(ngModel)]="updateUser.password" id="update_user_password" name="Password"><br><br>
+
+            <label for="update_user_role">Role: </label>
+            <input [(ngModel)]="updateUser.role" id="update_user_role" name="Role"><br><br>
+            <button (click)="update(updateUserId, updateUser)" class="bg-myGarage text-Gold-Color shadow-md float-left text-2xl leading-normal h-auto py-2 px-5 mb-3">Submit</button><br><br>
+        </form>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+            <tr>
+                <td>{{ updateUser.id }}</td>
+                <td>{{ updateUser.email }}</td>
+                <td>{{ updateUser.role }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class=" ml-5">
+        <h3 class=" text-2xl mb-2">Delete user</h3>
+        <label for="id">id: </label>
+        <input [(ngModel)]="deleteUserId" id="id" name="id"><br><br>
+        <button (click)="delete(deleteUserId)" class="bg-myGarage text-Gold-Color shadow-md float-left text-2xl leading-normal h-auto py-2 px-5 mb-3">Submit</button><br><br>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+</div>

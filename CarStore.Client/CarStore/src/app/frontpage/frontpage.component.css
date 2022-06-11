@@ -1,4 +1,15 @@
 *{
     background-color:  #262626;
     color: #ffd700;
+    box-sizing: border-box;
+}
+div{
+    background-color:  #262626;
+}
+.border{
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    text-align: center;
+    background-color:  #262626;
 }
