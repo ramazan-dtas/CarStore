@@ -17,3 +17,16 @@
     cursor: pointer;
     color: #ffd700;;
 }
+
+.sej{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+.products{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}

@@ -15,15 +15,15 @@
         
 
         <div class="products ml-10 mr-5 mt-5 grid grid-cols-4 leading-relaxed bg-gry h-screen ">
-            <div class="" *ngFor="let product of products; let i = index">
-                <div class=" border border-Gold-Color h-auto w-auto  ml-20 mt-10 bg-Gold-Color">
-                        <button class="btn btn-info me-1" routerLink="{{product.id}}">
-                            <img src="assets/image/coming-soon.jpg">                
-                        </button>
-                        <h4>{{product.category?.categoryName}}</h4>
-                        <p>Model: {{product.productName}}</p>
-                        <p>Price: {{product.price}} Kr.</p>
-                        <p>Model Year: {{product.productionYear}}</p>
+            <div class="sej" *ngFor="let product of products; let i = index">
+                <div class="border">
+                    <button class="btn btn-info me-1" routerLink="{{product.id}}">
+                        <img src="assets/image/coming-soon.jpg">                
+                    </button>
+                    <h4>{{product.category?.categoryName}}</h4>
+                    <p>Model: {{product.productName}}</p>
+                    <p>Price: {{product.price}} Kr.</p>
+                    <p>Model Year: {{product.productionYear}}</p>
                 </div>
             </div>
         </div>
